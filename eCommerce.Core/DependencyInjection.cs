@@ -1,3 +1,5 @@
+using eCommerce.Core.ServiceContracts;
+using eCommerce.Core.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace eCommerce.Core;
@@ -15,7 +17,7 @@ public static class DependencyInjection
         // To Do: Add services to the IoC container.
         // Core services often include data access, 
         // caching and other low-level components.
-
+        services.AddTransient<IUsersService, UsersService>();
         return services;
 
     }
